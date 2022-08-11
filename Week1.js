@@ -35,3 +35,28 @@ let countArraySum=(ar)=>{
     return ar.reduce((sum,a)=>{return sum+=a},0)
 }
 console.log(countArraySum(ar))
+
+
+/* Maria plays college basketball and wants to go pro. Each season she maintains a record of her play. 
+She tabulates the number of times she breaks her season record for most points and least points in a game. 
+Points scored in the first game establish her record for the season, and she begins counting from there. */
+let scores=[12,40,24,30,12]
+function breakingRecords(scores) {
+    let minCount=0;
+    let maxCount=0;
+    let max =scores[0];
+    let min=scores[0];
+    for(let score of scores){
+       if(score<min){
+           min=score
+           minCount++
+       }else if(score>max){
+           max =score
+           maxCount++
+       }
+    }
+    return [ maxCount,minCount]
+
+}
+
+console.log(breakingRecords(scores))
