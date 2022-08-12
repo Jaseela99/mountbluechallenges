@@ -74,4 +74,25 @@ function kangaroo(x1, v1, x2, v2) {
   return v2<v1 && (x2-x1)%(v1-v2)===0 ? "YES":"NO" 
 
 }
-console.log(0,3,2,5)
+console.log(kangaroo(0,3,2,5))
+
+//////////////////////////
+/* Staircase detail
+
+This is a staircase of size 4 :
+
+   #
+  ##
+ ###
+####
+Its base and height are both equal to n . It is drawn using # symbols and spaces. The last line is not preceded by any spaces.
+
+Write a program that prints a staircase of size n . */
+
+function staircase(n) {
+for(let i=1;i<=n;i++){
+    console.log(" ".repeat(n-i)+"#".repeat(i))
+}
+}
+
+staircase(8)
