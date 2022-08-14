@@ -123,3 +123,41 @@ function compareTriplets(a, b) {
     return count
 
 }
+
+/////////////////////////////////////////
+
+/* The previous challenges covered Insertion Sort, which is a simple and intuitive sorting algorithm with a running time of . In these next few challenges, we're covering a divide-and-conquer algorithm called Quicksort (also known as Partition Sort). 
+This challenge is a modified version of the algorithm that only addresses partitioning. 
+pivot=a[0] numbers less than pivot should be aligned left and greater than to the right */
+
+let a=[4,3,5,7,2]
+function quickSort(arr) {
+    // Write your code here
+    let left=[]
+    let right=[]
+    let equal=[]
+for(let i=0;i<arr.length;i++){
+    if(arr[0]>arr[i]){
+        left.push(arr[i])
+    }else if(arr[0]<arr[i]){
+        right.push(arr[i])
+    }else if(arr[i]===arr[0]){
+        equal.push(arr[i])
+    }
+}
+    let sorted=left.concat(equal)
+    return sorted.concat(right)
+}
+/* function quickSort(arr) {
+    // Write your code here
+    let sorted=[arr[0]]
+for(let i=0;i<arr.length;i++){
+    if(arr[0]>arr[i]){
+        sorted.unshift(arr[i])
+    }else if(arr[i]>arr[0]){
+        sorted.push(arr[i])
+    }
+}
+    return sorted
+} */
+console.log(quickSort(a))
