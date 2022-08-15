@@ -161,3 +161,24 @@ for(let i=0;i<arr.length;i++){
     return sorted
 } */
 console.log(quickSort(a))
+
+////////////////////////////////////////////
+
+/* Two friends Anna and Brian, are deciding how to split the bill at a dinner.
+ Each will only pay for the items they consume. Brian gets the check and calculates Anna's portion.
+  You must determine if his calculation is correct. */
+let bill=[3,7,8,9]
+let k=2 //index in bill that anna doesntt eat
+let b=14//money annna gave
+  function bonAppetit(bill, k, b) {
+    // Write your code here
+let result = ''
+    bill.splice(k,1)
+    const billCost = bill.reduce((previous, next) => previous+next, 0) / 2
+    if (billCost == b){
+        result = 'Bon Appetit'
+    } else {
+        result = b - billCost
+    }
+    console.log(result)
+}
