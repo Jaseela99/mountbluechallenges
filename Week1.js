@@ -205,6 +205,5 @@ let result = ''
     console.log(posCount/arr.length)
     console.log(negCount/arr.length)
     console.log(zeroCount/arr.length)
-    
 
 }
